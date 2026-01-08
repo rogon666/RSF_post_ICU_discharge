@@ -5,24 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Random Survival Forests' Post-ICU Risk Calculator</title>
     <style>
-      html, body { height: 100%; margin: 0; }
-      header {
-        padding: 12px 16px;
+      body {
         font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        margin: 0;
+        background: #ffffff;
+        color: #111111;
+      }
+      header {
+        padding: 14px 18px;
         border-bottom: 1px solid #e5e5e5;
       }
-      iframe { width: 100%; height: calc(100% - 54px); border: 0; }
+      main {
+        padding: 18px;
+        max-width: 980px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 16px;
+        border-radius: 10px;
+        text-decoration: none;
+        border: 1px solid #111;
+        background: #111;
+        color: #fff;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+      .btn.secondary {
+        background: #fff;
+        color: #111;
+      }
+      .note {
+        margin-top: 12px;
+        color: #444;
+        line-height: 1.4;
+      }
+      .card {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border: 1px solid #e5e5e5;
+        border-radius: 12px;
+        background: #fafafa;
+      }
+      code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
     </style>
   </head>
+
   <body>
     <header>
-      <b>RSF Post-ICU Risk Calculator</b>
-      <span style="opacity:0.7;">(hosted on Hugging Face)</span>
+      <div style="font-size: 18px; font-weight: 700;">
+        RSF Post-ICU Risk Calculator
+        <span style="font-weight: 400; opacity: 0.7;">(hosted on Hugging Face)</span>
+      </div>
     </header>
 
-    <iframe
-      src="https://huggingface.co/spaces/Rolando666/rsf-post-icu-risk-calculator"
-      allow="clipboard-read; clipboard-write"
-    ></iframe>
+    <main>
+      <a class="btn"
+         href="https://huggingface.co/spaces/Rolando666/rsf-post-icu-risk-calculator"
+         target="_blank" rel="noopener">
+        Open the calculator
+      </a>
+
+      <a class="btn secondary"
+         href="https://huggingface.co/Rolando666/RSF-post-ICU-discharge"
+         target="_blank" rel="noopener">
+        Model repository
+      </a>
+
+      <div class="note">
+        This GitHub Page is a landing page. The calculator opens in a new tab because Hugging Face Spaces
+        cannot be embedded in GitHub Pages using an iframe.
+      </div>
+
+      <div class="card">
+        <div style="font-weight: 700; margin-bottom: 8px;">Reference</div>
+        <div>
+          van Dongen DM, Gonzales Martinez RM, Nicodemo C, Lasserson D.
+          <i>
+            Chronic Diseases and Multimorbidity on the Cardiorenal-Cerebrovascular-Frailty Axis Predict Early Post-ICU Mortality:
+            Permutation-importance Insights from Age-stratified Random Survival Forests.
+          </i>
+        </div>
+      </div>
+
+      <!-- Optional: add a screenshot file at docs/screenshot.png and uncomment:
+      <div class="card">
+        <div style="font-weight:700; margin-bottom:10px;">Preview</div>
+        <img src="screenshot.png" alt="Calculator preview" style="max-width:100%; border-radius:12px; border:1px solid #e5e5e5;">
+      </div>
+      -->
+    </main>
   </body>
 </html>
